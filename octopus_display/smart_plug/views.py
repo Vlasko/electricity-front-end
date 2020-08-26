@@ -7,8 +7,6 @@ def homepage(request):
     return render(request, 'smart_plug/homepage.html')
 
 def display(request):
-    template_name='smart_plug/display.html'
-
     x_values_list=[1,2,3,4]
     y_values_list=[1,4,9,16]
 
