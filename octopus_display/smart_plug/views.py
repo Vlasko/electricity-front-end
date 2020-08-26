@@ -5,4 +5,4 @@ def homepage(request):
     return render(request, 'smart_plug/homepage.html')
 
 def display(request):
-    return render(request, 'smart_plug/detail.html')
+    return render(request, 'smart_plug/display.html')
