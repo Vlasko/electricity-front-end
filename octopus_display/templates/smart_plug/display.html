@@ -8,7 +8,11 @@
   <body>
     <h1>Electricity Front-End Display</h1>
     <div class="">
-      <img src="{% static 'images/example_graph.png' %}" alt="A graph displaying refrigerator electricity demand and Octopus Agile price data">
+      <!-- <img src="{% static 'images/example_graph.png' %}" alt="A graph displaying refrigerator electricity demand and Octopus Agile price data" class="center"> -->
+      {% autoescape off %}
+      {{ graph }}
+      {% endautoescape %}
     </div>
+    <a href="{% url 'homepage' %}">Homepage</a>
   </body>
 </html>
