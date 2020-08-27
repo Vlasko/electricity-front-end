@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <a href="{% url 'homepage' %}">Homepage</a>
+    <h1>Raw Data</h1>
+    {% if instances %}
+    <table>
+      <thead>
+        <th>Timestamp</th>
+        <th>Demand (W)</th>
+        <th>Unit Price (p/kWh)</th>
+        <th>Price (p)</th>
+      </thead>
+      {% for instance in instances %}
+      <tr>
+        <td>{{ instance.timestamp }}</td>
+        <td>{{ instance.demand }}</td>
+        <td>{{ instance.unit_price }}</td>
+        <td>{{ instance.price }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    {% endif %}
+  </body>
+</html>
