@@ -20,5 +20,6 @@ from smart_plug import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.homepage, name = 'homepage'),
-    path('display', views.display, name = 'display')
+    path('display', views.display, name = 'display'),
+    path('detail', views.detail, name='detail')
 ]
