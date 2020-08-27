@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'smart_plug'
 ]
 
 MIDDLEWARE = [
@@ -120,5 +121,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS =[
-    STATIC_DIR
+    STATIC_DIR,
 ]

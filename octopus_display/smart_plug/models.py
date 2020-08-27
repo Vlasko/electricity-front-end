@@ -1,6 +1,10 @@
 from django.db import models
 
 # Create your models here.
-class Demand(models.Model):
-    timestamp = models.DateTimefield()
-    demand = models.Floatfield()
+class Instance(models.Model):
+    timestamp = models.DateTimeField()
+    demand = models.FloatField()
+    price = models.FloatField()
+
+    def __str__(self):
+        return self.top_name
