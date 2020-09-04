@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 {% load static %}
-
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Detail</title>
+    <link rel="stylesheet" href="{% static "css/indexstyle.css" %}"/>
+    <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
   </head>
   <body>
-    <a href="{% url 'homepage' %}">Homepage</a>
+    <ul>
+      <li><a href="{% url 'homepage' %}">Homepage</a></li>
+      <li><a href="{% url 'display' %}">Display</a></li>
+      <li><a href="{% url 'detail' %}">Detail</a></li>
+      <li><a href="{% url 'about' %}">About</a></li>
+    </ul>
     <h1>Raw Data</h1>
     {% if instances %}
     <table>

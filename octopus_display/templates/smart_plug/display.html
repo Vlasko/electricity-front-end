@@ -4,15 +4,21 @@
   <head>
     <meta charset="utf-8">
     <title>Display</title>
+    <link rel="stylesheet" href={% static "css/indexstyle.css" %}>
+    <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
   </head>
   <body>
+    <ul>
+      <li><a href="{% url 'homepage' %}">Homepage</a></li>
+      <li><a href="{% url 'display' %}">Display</a></li>
+      <li><a href="{% url 'detail' %}">Detail</a></li>
+      <li><a href="{% url 'about' %}">About</a></li>
+    </ul>
     <h1>Electricity Front-End Display</h1>
     <div class="">
-      <!-- <img src="{% static 'images/example_graph.png' %}" alt="A graph displaying refrigerator electricity demand and Octopus Agile price data" class="center"> -->
       {% autoescape off %}
       {{ graph }}
       {% endautoescape %}
     </div>
-    <a href="{% url 'homepage' %}">Homepage</a>
   </body>
 </html>
