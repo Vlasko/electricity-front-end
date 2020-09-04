@@ -27,14 +27,14 @@ def display(request):
     # add demand data to plot
     fig.add_trace(Scatter(x=index_values_list,
                               y=demand_values_list,
-                              name='demand data',
+                              name='Demand (W)',
                               marker={'color':'red'},
                               hovertext=demand_values_list),
                               secondary_y=False)
     # add price data to plot
     fig.add_trace(Scatter(x=index_values_list,
                               y=unit_price_values_list,
-                              name='price data',
+                              name='Price (p/kWh)',
                               marker={'color':'blue'},
                               hovertext=unit_price_values_list),
                               secondary_y=True)
@@ -53,3 +53,6 @@ def detail(request):
     inst = Instance.objects.all()
     inst_dict = {'instances':inst}
     return render(request, 'smart_plug/detail.html', context=inst_dict)
+
+def about(request):
+    return render(request, 'smart_plug/about.html')
