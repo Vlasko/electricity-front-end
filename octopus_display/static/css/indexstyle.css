@@ -2,26 +2,25 @@ html{
   font-family: 'Karla', sans-serif;
 }
 
-h1{
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  font-weight: bolder;
-  color: blue;
-}
-
-h2{
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  font-weight: lighter;
-}
-
-p{
+.greyCentred{
   display: flex;
   justify-content: center;
   text-align: center;
   color: grey;
+}
+
+.headingCentred{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-weight: bolder;
+  color: #ffcccc;
+}
+
+.linksCentred{
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 table{
@@ -29,13 +28,14 @@ table{
   margin-right: auto;
 }
 
-ul{
+/* These settings should only be for the navigation bar */
+.navigationBar{
   font-family: 'Karla', sans-serif;
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #f1f1f1;
+  background-color: yellow;
 }
 
 li{
@@ -54,4 +54,18 @@ li a{
 li a:hover {
   background-color: #555;
   color: white;
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
