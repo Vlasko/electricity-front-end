@@ -8,13 +8,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
   </head>
   <body>
-    <ul>
+    <ul class="navigationBar">
       <li><a href="{% url 'homepage' %}">Homepage</a></li>
       <li><a href="{% url 'display' %}">Display</a></li>
       <li><a href="{% url 'detail' %}">Detail</a></li>
       <li><a href="{% url 'about' %}">About</a></li>
     </ul>
-    <h1>Electricity Front-End Homepage</h1>
+    <h1 class="headingCentred">Electricity Front-End Homepage</h1>
+    <div class="greyCentred">
     <p>This project displays data collected from a TP Link smart plug and the Octopus Energy API.</p>
+    <p>It uses the following project to collect, store and upload electricity
+      demand and price data on a Raspberry Pi from WiFi enabled TP Link smart plug to AWS S3;</p>
+    <a class="linksCentred" href="https://github.com/Vlasko/electricity-upload">electricity-upload</a>
+    <p>This data is then downloaded from S3 onto a computer for processing and
+      visualistion through this project;</p>
+    <a class="linksCentred" href="https://github.com/Vlasko/electricity-processing">electricity-processing</a>
+    <p>Finally, this front-end application is built using Django, hosted in this repository;</p>
+    <a class="linksCentred" href="https://github.com/Vlasko/electricity-front-end">electricity-front-end</a>
+    </div>
+    <p>The following third party services were used in the project;</p>
+    <div style="text-align:center">
+    <div class="row">
+    <div class="column">
+      <img src="{% static "images/octopus-energy.webp" %}" alt="Snow" style="width:20%">
+    </div>
+    <div class="column">
+      <img src="{% static "images/TPLINK.svg" %}" alt="Forest" style="width:20%">
+    </div>
+    <div class="column">
+      <img src="{% static "images/aws-s3.png" %}" style="width:20%">
+    </div>
+    </div>
+    </div>
   </body>
 </html>
