@@ -8,13 +8,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
   </head>
   <body>
-    <ul>
+    <ul class="nav-bar">
       <li><a href="{% url 'homepage' %}">Homepage</a></li>
       <li><a href="{% url 'display' %}">Display</a></li>
       <li><a href="{% url 'detail' %}">Detail</a></li>
       <li><a href="{% url 'about' %}">About</a></li>
     </ul>
-    <h1>Electricity Front-End Display</h1>
+    <h1 class="centred-heading">Electricity Front-End Display</h1>
     <div class="">
       {% autoescape off %}
       {{ graph }}

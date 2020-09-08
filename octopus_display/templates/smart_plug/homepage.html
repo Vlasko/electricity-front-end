@@ -8,37 +8,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
   </head>
   <body>
-    <ul class="navigationBar">
+    <ul class="nav-bar">
       <li><a href="{% url 'homepage' %}">Homepage</a></li>
       <li><a href="{% url 'display' %}">Display</a></li>
       <li><a href="{% url 'detail' %}">Detail</a></li>
       <li><a href="{% url 'about' %}">About</a></li>
     </ul>
-    <h1 class="headingCentred">Electricity Front-End Homepage</h1>
-    <div class="greyCentred">
+    <h1 class="centred-heading">Electricity Front-End Homepage</h1>
+    <div class="centred-text">
     <p>This project displays data collected from a TP Link smart plug and the Octopus Energy API.</p>
     <p>It uses the following project to collect, store and upload electricity
       demand and price data on a Raspberry Pi from WiFi enabled TP Link smart plug to AWS S3;</p>
-    <a class="linksCentred" href="https://github.com/Vlasko/electricity-upload">electricity-upload</a>
+    <a href="https://github.com/Vlasko/electricity-upload">electricity-upload</a>
     <p>This data is then downloaded from S3 onto a computer for processing and
       visualistion through this project;</p>
-    <a class="linksCentred" href="https://github.com/Vlasko/electricity-processing">electricity-processing</a>
+    <a href="https://github.com/Vlasko/electricity-processing">electricity-processing</a>
     <p>Finally, this front-end application is built using Django, hosted in this repository;</p>
-    <a class="linksCentred" href="https://github.com/Vlasko/electricity-front-end">electricity-front-end</a>
-    </div>
+    <a href="https://github.com/Vlasko/electricity-front-end">electricity-front-end</a>
     <p>The following third party services were used in the project;</p>
-    <div style="text-align:center">
+    <br>
+    </div>
+
     <div class="row">
-    <div class="column">
-      <img src="{% static "images/octopus-energy.webp" %}" alt="Snow" style="height:100px">
+      <div class="column">
+        <img src="{% static "images/octopus-energy.png" %}" alt="Snow" style="height:120px">
+      </div>
     </div>
-    <div class="column">
-      <img src="{% static "images/TPLINK.svg" %}" alt="Forest" style="height:100px">
+    <div class="row">
+      <div class="column">
+        <img src="{% static "images/TPLINK.svg" %}" alt="Forest" style="height:120px">
+      </div>
     </div>
-    <div class="column">
-      <img src="{% static "images/aws-s3.png" %}" style="height:100px">
-    </div>
-    </div>
+    <div class="row">
+      <div class="column">
+        <img src="{% static "images/aws.png" %}" style="height:120px">
+      </div>
     </div>
   </body>
 </html>
