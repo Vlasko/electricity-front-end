@@ -1,26 +1,6 @@
 html{
   font-family: 'Karla', sans-serif;
-}
-
-.greyCentred{
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  color: grey;
-}
-
-.headingCentred{
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  font-weight: bolder;
-  color: #ffcccc;
-}
-
-.linksCentred{
-  display: flex;
-  justify-content: center;
-  text-align: center;
+  background-color: #E9ACA4;
 }
 
 table{
@@ -28,21 +8,36 @@ table{
   margin-right: auto;
 }
 
-/* These settings should only be for the navigation bar */
-.navigationBar{
+/* self defined classes */
+.centred-text {
+  justify-content: center;
+  text-align: center;
+  color: black;
+}
+
+.centred-heading {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-weight: bolder;
+  color: #A5E1E9;
+}
+
+/* styles related to navigation bar */
+.nav-bar {
   font-family: 'Karla', sans-serif;
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: yellow;
+  background-color: #E9ACA4;
 }
 
-li{
+ul.nav-bar li{
   float: left;
 }
 
-li a{
+ul.nav-bar li a {
   display: block;
   color: #000;
   text-align: center;
@@ -50,22 +45,26 @@ li a{
   text-decoration: none;
 }
 
-/* Change the link color on hover */
-li a:hover {
-  background-color: #555;
-  color: white;
+ul.nav-bar li a:hover {
+  background-color: #A5E1E9;
+  color: black;
 }
 
-/* Three image containers (use 25% for four, and 50% for two, etc) */
+/* styles related to displaying pictures on hompage */
 .column {
+  justify-content: center;
   float: left;
-  width: 33.33%;
-  padding: 5px;
+  width: 33.3%;
+  margin-bottom: 16px;
 }
 
-/* Clear floats after image containers */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
+/* styles related to centred unorder list on about page*/
+.center-list {
+  display: flex;
+  justify-content: center;
+}
+
+.link-list {
+  list-style: none;
+  text-align: center;
 }
