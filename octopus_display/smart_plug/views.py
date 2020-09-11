@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from plotly.offline import plot
-from plotly.graph_objs import Scatter
+from plotly.graph_objs import Scatter, Layout
 from plotly.subplots import make_subplots
 from smart_plug.models import Instance
 
@@ -22,8 +22,11 @@ def display(request):
         demand_values_list.append(values[1])
         unit_price_values_list.append(values[3]) #check why this is 2 not 3
 
+    layout = Layout(paper_bgcolor='rgba(0,0,0,0)',
+                   plot_bgcolor='rgba(0,0,0,0)')
+
     fig = make_subplots(specs=[[{"secondary_y": True}]],
-                        subplot_titles=['Demand and Price data'])
+                        subplot_titles=['Demand and Price Data'])
     # add demand data to plot
     fig.add_trace(Scatter(x=index_values_list,
                               y=demand_values_list,
@@ -39,12 +42,13 @@ def display(request):
                               hovertext=unit_price_values_list),
                               secondary_y=True)
     # add axis titles & labels
+    fig.update_layout(layout)
     fig.update_xaxes(title_text="Datetime")
     fig.update_yaxes(title_text="<b>Demand (W)</b>",
                      secondary_y=False)
     fig.update_yaxes(title_text="<b>Price (p/kWh)</b>",
                      secondary_y=True)
-
+    fig['layout']['yaxis2']['showgrid']=False
     div = plot(fig, output_type='div')
     graph_dict = {'graph':div}
     return render(request, 'smart_plug/display.html', context=graph_dict)
