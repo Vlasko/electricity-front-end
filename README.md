@@ -7,4 +7,4 @@ Octopus API using the Django Framework.
 The data for this project has been collected using https://github.com/Vlasko/electricity-upload
 
 ## To Do List
--[] Fix images on homepage of `octopus-display`
+- [ ] Fix images on homepage of `octopus-display`
