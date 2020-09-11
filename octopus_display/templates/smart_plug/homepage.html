@@ -15,34 +15,35 @@
       <li><a href="{% url 'about' %}">About</a></li>
     </ul>
     <h1 class="centred-heading">Electricity Front-End Homepage</h1>
+    <p class="centred-text">This project displays data collected from a TP Link smart plug and the Octopus Energy API.</p>
+    <p class="centred-text">
+      It uses the following project to collect, store and upload electricity
+      demand and price data on a <br> Raspberry Pi from WiFi enabled TP Link smart plug to AWS S3;</p>
     <div class="centred-text">
-    <p>This project displays data collected from a TP Link smart plug and the Octopus Energy API.</p>
-    <p>It uses the following project to collect, store and upload electricity
-      demand and price data on a Raspberry Pi from WiFi enabled TP Link smart plug to AWS S3;</p>
-    <a href="https://github.com/Vlasko/electricity-upload">electricity-upload</a>
-    <p>This data is then downloaded from S3 onto a computer for processing and
+      <a href="https://github.com/Vlasko/electricity-upload"target="_blank">electricity-upload</a>
+    </div>
+    <p class="centred-text">This data is then downloaded from S3 onto a computer for processing and
       visualistion through this project;</p>
-    <a href="https://github.com/Vlasko/electricity-processing">electricity-processing</a>
-    <p>Finally, this front-end application is built using Django, hosted in this repository;</p>
-    <a href="https://github.com/Vlasko/electricity-front-end">electricity-front-end</a>
-    <p>The following third party services were used in the project;</p>
+    <div class="centred-text">
+      <a href="https://github.com/Vlasko/electricity-processing"target="_blank" class="centred-link">electricity-processing</a>
+    </div>
+    <p class="centred-text">Finally, this front-end application is built using Django, hosted in this repository;</p>
+    <div class="centred-text">
+      <a href="https://github.com/Vlasko/electricity-front-end"target="_blank">electricity-front-end</a>
+    </div>
+    <p class="centred-text">The following third party services were used in the project;</p>
     <br>
-    </div>
 
-    <div class="row">
-      <div class="column">
-        <img src="{% static "images/octopus-energy.png" %}" alt="Snow" style="height:120px">
-      </div>
-    </div>
-    <div class="row">
-      <div class="column">
-        <img src="{% static "images/TPLINK.svg" %}" alt="Forest" style="height:120px">
-      </div>
-    </div>
-    <div class="row">
-      <div class="column">
-        <img src="{% static "images/aws.png" %}" style="height:120px">
-      </div>
-    </div>
+    <ul class="image-box">
+      <li>
+        <img src="{% static "images/octopus-energy.png" %}" alt="Octopus Energy Logo" style="height:120px">
+      </li>
+      <li>
+        <img src="{% static "images/TPLINK.svg" %}" alt="TP Link Logo" style="height:120px">
+      </li>
+      <li>
+        <img src="{% static "images/aws.png" %}" alt="AWS Logo" style="height:120px">
+      </li>
+  </ul>
   </body>
 </html>

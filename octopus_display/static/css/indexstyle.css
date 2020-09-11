@@ -1,6 +1,14 @@
+:root {
+  --color-1: #f4eeff;
+  --color-2: #dcd6f7;
+  --color-3: #a6b1e1;
+  --color-4: #424874;
+  --main-padding: 15px;
+}
+
 html{
   font-family: 'Karla', sans-serif;
-  background-color: #E9ACA4;
+  background-color: var(--color-1);
 }
 
 table{
@@ -15,12 +23,23 @@ table{
   color: black;
 }
 
+.centred-footer {
+  color: black;
+  position: absolute;
+  bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
 .centred-heading {
   display: flex;
   justify-content: center;
   text-align: center;
   font-weight: bolder;
-  color: #A5E1E9;
+  color: var(--color-4);
 }
 
 /* styles related to navigation bar */
@@ -30,7 +49,7 @@ table{
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #E9ACA4;
+  background-color: var(--color-2);
 }
 
 ul.nav-bar li{
@@ -46,7 +65,7 @@ ul.nav-bar li a {
 }
 
 ul.nav-bar li a:hover {
-  background-color: #A5E1E9;
+  background-color: var(--color-3);
   color: black;
 }
 
@@ -62,9 +81,43 @@ ul.nav-bar li a:hover {
 .center-list {
   display: flex;
   justify-content: center;
+  padding-left: 0;
 }
 
 .link-list {
   list-style: none;
   text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+
+.image-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul.image-box li {
+  list-style: none;
+  height: 100%;
+  flex-grow: 1;
+}
+
+ul.image-box li img {
+  max-height: 70%;
+  min-width: 70%;
+  object-fit: cover;
+  vertical-align: bottom;
 }
